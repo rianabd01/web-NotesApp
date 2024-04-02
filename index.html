@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="src/styles/main.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cc29e4fb2e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <header class="main-header">
+        <div class="title-jumbotron">
+          <p>Project</p>
+          <h1>My Notes</h1>
+        </div>
+        <div class="isarchived">
+          <p id="isarchived-title">Notes</p>
+          <i class="fa-solid fa-box-archive archive-toggle" id="archived-notes"> </i>
+          <i class="fa-solid fa-left-long archive-toggle" id="back-archived"> </i>
+        </div>
+      </header>
+
+      <div class="notes-action">
+        <button id="add-notes"><i class="fa-solid fa-plus"></i></button>
+        <!-- <button id="archived-notes">Archived</button> -->
+        <section class="search">
+          <input type="search" placeholder="Search title" />
+        </section>
+      </div>
+
+      <article class="notes-wrap">
+        <loading-component></loading-component>
+        <notes-list></notes-list>
+      </article>
+
+      <notes-modal> </notes-modal>
+    </main>
+
+    <!-- <script src="src/script/app.js" type="module"></script> -->
+  </body>
+</html>

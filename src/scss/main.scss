@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+* {
+  font-family: 'Mako', sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 7;
+  order: 1;
+}
+
+.main-header {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(0, 0, 0, 0.37)),
+    url('../../public/bg.jpg');
+  background-size: cover;
+  height: 150px;
+  padding: 25px;
+  display: flex;
+  .title-jumbotron {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p {
+      margin: 0;
+      padding: 0;
+      margin-bottom: -7px;
+      font-size: 0.8em;
+      color: white;
+    }
+
+    h1 {
+      color: white;
+      /* margin-top: 100px; */
+      padding: 0;
+      margin: 0;
+      font-weight: 300;
+      font-size: 2em;
+      /* color: white; */
+    }
+  }
+  .isarchived {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-weight: 900;
+      font-size: 1em;
+    }
+    .archive-toggle {
+      cursor: pointer;
+      color: white;
+      align-self: flex-end;
+    }
+    #back-archived {
+      display: none;
+    }
+  }
+}
+
+.notes-action {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 0;
+  justify-content: space-between;
+  padding: 0 30px;
+  button {
+    // padding: 10px 10px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #f28d2f;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25em;
+    transition: 0.25s;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+  .search {
+    input {
+      padding: 10px 15px;
+      border-radius: 0.5rem;
+      font-size: 0.8em;
+      // background-color: #f28d2f;
+      border: 1px solid #888888;
+    }
+  }
+}
+
+.notes-wrap {
+  padding: 10px;
+  margin: 10px 20px;
+  border-radius: 1rem;
+  background-color: #f9f9f9;
+  notes-item {
+    .action i {
+      color: #888888;
+    }
+    .action i:hover {
+      color: black;
+    }
+  }
+}
+
+notes-modal .modal {
+  // transition: 0.5s;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+notes-modal .modal form input[type='text'] {
+  border: 1px solid black;
+  font-size: 1em;
+}
+notes-modal .modal form textarea {
+  border: 1px solid black;
+  font-size: 1em;
+}
+
+// MODAL ADD NOTES
+
+@media screen and (max-width: 700px) {
+  notes-modal {
+    .modal {
+      width: 80%;
+    }
+  }
+}
